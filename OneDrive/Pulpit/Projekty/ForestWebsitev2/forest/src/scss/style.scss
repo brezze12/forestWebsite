@@ -1,0 +1,203 @@
+@use './fonts' as *;
+@use './small' as *;
+@use './medium' as *;
+@use './large' as *;
+@use './form' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 74px;
+}
+body {
+	font-family: $main-font;
+	font-size: 1.6rem;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+//NAV
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	z-index: 10;
+}
+
+.nav-box {
+	position: relative;
+	margin: 0 auto;
+	height: 10vh;
+	width: 100%;
+	max-width: 1200px;
+	font-family: $main-font;
+}
+.logo {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	margin: 10px 10px;
+	padding: 1em 0;
+	text-decoration: none;
+	color: #000;
+	&-img {
+		padding: 2rem;
+		width: 2em;
+		height: 2em;
+		background-image: url('../img/christmas-tree.svg');
+		background-position: center;
+		background-size: cover;
+	}
+	&-text {
+		font-size: 3.5rem;
+	}
+}
+
+//hero-img
+.hero-img {
+	position: relative;
+	height: 40vh;
+	background-position: center;
+	background-size: cover;
+}
+
+.hero-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.hero-name,
+.hero-text {
+	font-family: $second-font;
+	color: #fff;
+}
+.hero-name {
+	top: 40%;
+}
+.hero-text {
+	top: 50%;
+}
+
+//AboutUs
+.section-title {
+	position: relative;
+	margin-bottom: 2em;
+	font-size: 3.5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	color: #488148;
+	letter-spacing: .5rem;
+}
+.section-padding {
+	padding: 2.5rem 1rem 0;
+}
+
+//contact
+
+.contact {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: #488148;
+}
+.logo-footer {
+	display: grid;
+	grid-column: 1/4;
+	justify-content: center;
+	align-content: center;
+	padding: 1rem;
+	.logo-img {
+		display: grid;
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+	.logo-text {
+		display: grid;
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+}
+.contact-first {
+	display: grid;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	text-align: center;
+	padding: 1rem;
+}
+.contact-second {
+	display: grid;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	padding: 1rem;
+	text-align: center;
+}
+.contact-third {
+	display: grid;
+	grid-column: 3/4;
+	grid-row: 2/3;
+	padding: 1rem;
+	text-align: center;
+}
+.contact-title {
+	font-size: 2rem;
+	font-weight: 800;
+}
+li {
+	display: block;
+	padding: 0.5rem;
+	font-size: 1.5rem;
+}
+
+//footer
+.footer-text {
+	padding: 1rem;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+//subpage offers
+
+.link-offers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 0 2.5rem 0;
+	font-weight: 800;
+	color: #488148;
+}
+
+//subpage contact
+
+.form-wrapper{
+	border-radius: 5%;
+}
+.maps {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contact-item{
+	cursor: pointer;
+	a{
+		text-decoration: none;
+		color: #000;
+	}
+}

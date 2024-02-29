@@ -1,0 +1,103 @@
+form {
+	padding: 2.5rem;
+	font-size: 2rem;
+	h1 {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.form-box {
+		margin-bottom: 2rem;
+		label {
+			display: inline-block;
+			margin-bottom: 1rem;
+		}
+		input {
+			width: 100%;
+			padding: 1.5rem;
+			font-size: 1.5rem;
+			border: 1px solid rgb(197, 197, 197);
+		}
+		.error-text {
+			margin: 1rem 0 0 2rem;
+			font-size: 1.5rem;
+			color: #ff3235;
+			visibility: hidden; //wizualnie ukrywa ale element nadal tu jest
+		}
+	}
+	.form-box.error input {
+		background-color: rgb(0, 137, 250, 0.3);
+		border: 1px solid rgb(0, 137, 250, 0.1);
+	}
+	.form-box.error .error-text {
+		visibility: visible;
+	}
+	.control-buttons {
+		display: flex;
+		justify-content: flex-end;
+		.send {
+			background-color: #488148;
+		}
+		.send,
+		.clear {
+			padding: 1rem 0;
+			margin-left: 1rem;
+			width: 15vh;
+			font-size: 2rem;
+			color: #fff;
+			border: none;
+			border-radius: 5%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.clear {
+			background-color: #000;
+		}
+		.send:hover {
+			background-color: #518e51;
+		}
+		.clear:hover {
+			background-color: #232323;
+		}
+	}
+	.popup {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		top: -50rem;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 50vh;
+		height: 30vh;
+		background-color: #fff;
+		border-radius: 5%;
+		border: 0.3rem solid black;
+		transition: top 0.5s;
+
+		p {
+			font-size: 2rem;
+			margin-left: 2rem;
+		}
+
+		.close {
+			padding: 1rem 0;
+			margin-left: 1rem;
+			margin-top: 1rem;
+			width: 15vh;
+			font-size: 2rem;
+			background-color: #488148;
+			color: #fff;
+			border: none;
+			border-radius: 5%;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		.close:hover {
+			background-color: #305830;
+		}
+	}
+	.show-popup {
+		top: 50rem;
+	}
+}
