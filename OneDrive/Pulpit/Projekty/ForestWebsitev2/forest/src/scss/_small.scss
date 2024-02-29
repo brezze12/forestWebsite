@@ -1,0 +1,172 @@
+@use './fonts' as *;
+
+@media (max-width: 576px) {
+	//nav
+	.nav-desktop {
+		display: none;
+	}
+	.nav-mobile {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100vh;
+		background-color: #488148;
+		transform: translateX(-100%);
+		transition: transform 0.3s;
+		z-index: 10;
+
+		&--active {
+			transform: translateX(0);
+		}
+		.nav-item {
+			position: relative;
+			display: block;
+			padding: 1em;
+			margin: 1em;
+			a {
+				color: #fff;
+				font-size: 2rem;
+				text-decoration: none;
+			}
+		}
+	}
+	.burger-btn {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 1rem;
+		padding: 0.5rem;
+	}
+	.burger-icon {
+		width: 2em;
+		height: 2em;
+		background-image: url('../img/menu-2.svg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	//hero-img
+
+	.hero-img {
+		background-image: url('../img/jungle-small.jpg');
+	}
+	.hero-name, .hero-text{
+		position: absolute;
+		left: 5%;
+	}
+
+	//AboutUs
+	.aboutus-img {
+		position: relative;
+		height: 40vh;
+		background-image: url('../img/waters-small.jpg');
+		background-position: center;
+		background-size: cover;
+	}
+	.aboutus-text {
+		h2 {
+			padding: 2rem;
+			font-size: 2rem;
+			text-align: center;
+		}
+		p {
+			margin-left: 1rem;
+			font-family: $second-font;
+		}
+	}
+	//adventure section
+
+	.hero-img-adventure {
+		position: relative;
+		height: 25vh;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		background-image: url('../img/girl-small.jpg');
+		background-position: center;
+		background-size: cover;
+		.hero-text {
+			margin-left: 2rem;
+			padding: 1rem;
+			font-size: 2rem;
+			border: 1px solid #fff;
+		}
+	}
+
+	//offers
+	.offers {
+		h1 {
+			margin-bottom: 1em;
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		.section-content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+		.card {
+			padding: 2rem;
+			margin: 1.5rem;
+			width: 50%;
+			font-family: $second-font;
+			text-align: center;
+			border-radius: 8px;
+			box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.5);
+		}
+		.card-title {
+			padding: 1rem;
+			font-size: 1.5rem;
+		}
+		.card-cost {
+			padding: 1rem;
+			font-size: 3rem;
+			font-weight: 600;
+		}
+		.options-list-item {
+			position: relative;
+			display: block;
+			margin: 1rem 0;
+			font-size: 1rem;
+			text-decoration: none;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+
+		.offers-button {
+			padding: 0.5rem;
+			width: 100%;
+			font-family: $second-font;
+			text-transform: uppercase;
+			text-align: center;
+			border-radius: 5%;
+			transition: background-color 0.3s;
+			&:hover,
+			:focus {
+				color: #fff;
+				background-color: #488148;
+			}
+			&-check {
+				background-color: #488148;
+			}
+		}
+	}
+	//contact form
+	.form-wrapper {
+		margin-top: 20rem;
+		margin-right: 2rem;
+		margin-bottom: 2rem;
+		width: 50vh;
+		background-color: #fff;
+		box-shadow: 0 0 10px #000;
+	}
+}
