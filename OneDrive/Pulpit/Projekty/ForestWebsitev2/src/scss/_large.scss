@@ -1,0 +1,225 @@
+@use './fonts' as *;
+
+@media (min-width: 992px) {
+	//nav
+	.nav-desktop {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		flex-wrap: wrap;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+		.nav-item {
+			display: inline-block;
+			padding: 2em 1em;
+			a {
+				margin: 0 1em;
+				padding: 2em 1em;
+				text-decoration: none;
+				color: #000;
+				&:hover {
+					color: #fff;
+				}
+			}
+			&:hover {
+				color: #fff;
+				background-color: #000;
+			}
+		}
+		.active {
+			background-color: #000;
+			a {
+				color: #fff;
+			}
+		}
+	}
+	.nav-mobile {
+		display: none;
+	}
+
+	//hero-img
+
+	.hero-img {
+		background-image: url('../img/jungle-large.jpg');
+	}
+	.hero-name,
+	.hero-text {
+		position: relative;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1200px;
+		font-family: $second-font;
+		color: #fff;
+	}
+	.hero-name {
+		top: 40%;
+	}
+	.hero-text {
+		top: 50%;
+	}
+
+	//AboutUs
+	.section-title {
+		position: relative;
+		margin-bottom: 2em;
+		font-size: 4rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		color: #000;
+		letter-spacing: 2px;
+	}
+	.section-padding {
+		padding: 2rem 1rem 0;
+	}
+	.section-content-aboutus {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+	.aboutus-img {
+		margin: 1rem;
+		height: 40vh;
+		background-image: url('../img/waters-large.jpg');
+		background-position: center;
+		background-size: cover;
+		order: 1;
+	}
+	.aboutus-text {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem;
+		h2 {
+			padding: 2rem;
+			font-size: 2rem;
+		}
+		p {
+			margin-left: 1rem;
+			font-family: $second-font;
+		}
+	}
+	//adventure section
+
+	.hero-img-adventure {
+		position: relative;
+		height: 30vh;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		background-image: url('../img/girl-large.jpg');
+		background-position: center;
+		background-size: cover;
+		.hero-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin-left: 2rem;
+			padding: 4rem 25rem;
+			font-size: 2rem;
+			text-align: center;
+			border: 1px solid #fff;
+		}
+	}
+
+	//offers
+	.offers {
+		h1 {
+			margin-bottom: 1em;
+			font-size: 3rem;
+			text-align: center;
+		}
+		.section-content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+		.card {
+			padding: 2rem;
+			margin: 1.5rem;
+			width: 25%;
+			font-family: $second-font;
+			text-align: center;
+			border-radius: 8px;
+			box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.5);
+		}
+		.card-title {
+			padding: 1rem;
+			font-size: 3rem;
+		}
+		.card-cost {
+			padding: 1rem;
+			font-size: 4rem;
+			font-weight: 600;
+		}
+		.options-list-item {
+			position: relative;
+			display: block;
+			margin: 1rem 2rem;
+			font-size: 1.5rem;
+			text-decoration: none;
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+		}
+
+		.offers-button {
+			padding: 1rem;
+			width: 100%;
+			font-family: $second-font;
+			text-transform: uppercase;
+			text-align: center;
+			font-size: 2rem;
+			border-radius: 8px;
+			transition: background-color 0.3s;
+			cursor: pointer;
+			&:hover,
+			:focus {
+				color: #fff;
+				background-color: #488148;
+			}
+			&-check {
+				background-color: #488148;
+			}
+		}
+		.link-offers {
+			font-size: 2rem;
+		}
+	}
+	//form-contact
+	.form-wrapper {
+		margin-top: 15rem;
+		margin-right: 2rem;
+		margin-bottom: 2rem;
+		width: 50vh;
+		background-color: #fff;
+		box-shadow: 0 0 10px #000;
+	}
+	.contact-box {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		width: 100vh;
+	}
+	//contact
+
+	li {
+		font-size: 1.75rem;
+	}
+
+	//footer
+	.footer-text {
+		margin: 1rem;
+		font-size: 1.7rem;
+	}
+}

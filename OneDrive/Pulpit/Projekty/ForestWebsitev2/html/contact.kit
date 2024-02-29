@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+    <!--@include 'nav.kit'-->
+    <div class="contact-box">
+        <div class="form-wrapper">
+            <form>
+                <h1>Zarejestruj się</h1>
+                <div class="form-box">
+                    <label for="username">Nazwa użytkownika:</label>
+                    <input type="text" id="username" class="username" placeholder="Podaj nazwę użytkownika">
+                    <p class="error-text">error</p>
+                </div>
+                <div class="form-box">
+                    <label for="password">Hasło:</label>
+                    <input type="password" id="password" class="password" placeholder="Wpisz hasło">
+                    <p class="error-text">error</p>
+                </div>
+                <div class="form-box">
+                    <label for="password-repeat">Powtórz hasło:</label>
+                    <input type="password" id="password-repeat" class="password-repeat"
+                        placeholder="Wpisz hasło jezcze raz">
+                    <p class="error-text">error</p>
+                </div>
+                <div class="form-box">
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" class="email" placeholder="Wpisz swój adres email">
+                    <p class="error-text">error</p>
+                </div>
+
+                <div class="control-buttons">
+                    <button class="clear">Wyczyść</button>
+                    <button class="send">Wyślij</button>
+                </div>
+
+                <div class="popup">
+                    <p>Formularz został poprawnie wysłany</p>
+                    <button class="close">Zamknij</button>
+                </div>
+            </form>
+        </div>
+        <div class="maps section-padding">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898050088972!2d19.890269276833855!3d50.08819561338032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1708946789607!5m2!1spl!2spl"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <!--@include 'contactSection.kit'-->
+    <!--@include 'footer.kit'-->
+
+    <script src="./dist/js/form.min.js"></script>
+</body>
